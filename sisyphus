@@ -1,2 +1,11 @@
 #!/bin/sh
+#
+# sisphyus - tools for the never ending task
+#
+# there's lots of ways to pick a random line from a file
+#
+# Darwin
 gshuf -n 1 $HOME/bin/sisyphus.txt
+#
+# gnu
+# shuf -n 1 $HOME/bin/sisyphus.txt
