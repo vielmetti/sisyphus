@@ -1,0 +1,43 @@
+Add a line to this file.
+Boil the kettle.
+Carry something (up/down) the stairs.
+Change the frequency.
+Charge the computer.
+Charge the phone.
+Clean up five things.
+Close a drawer / open a drawer.
+Close an issue in Github.
+Close the computer.
+Did you take your meds?
+Drink a glass of water.
+Eat a snack.
+Find a pen.
+Floss one tooth.
+Get up and stretch.
+Go to bed.
+Improve your posture.
+How late is it?
+Make a cup of tea.
+Make the bed.
+Move the laundry around.
+Open a book / put away a book.
+Open an issue in Github.
+Open one envelope.
+Open up Facebook, read, sigh, close Facebook.
+Open up Twitter, read, sigh, close Twitter.
+Pet the cat.
+Read the oldest message in the inbox.
+Shine the sink.
+Take out the trash.
+Take your meds.
+Take out the compost.
+Tidy.
+Turn (on/off) one light.
+Turn the radio (on/off).
+What time is it?
+What is for dinner?
+Where are your glasses?
+Where is the car parked?
+Write one rolodex card.
+Write on a piece of paper.
+Write one sentence.

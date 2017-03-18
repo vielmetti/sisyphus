@@ -1,0 +1,2 @@
+#!/bin/sh
+gshuf -n 1 $HOME/bin/sisyphus.txt
