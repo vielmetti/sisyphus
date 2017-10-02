@@ -14,6 +14,7 @@ Eat a snack.
 Find a pen.
 Floss one tooth.
 Get up and stretch.
+Get up and take a walk.
 Go to bed.
 Improve your posture.
 How late is it?
@@ -28,10 +29,13 @@ Open up Twitter, read, sigh, close Twitter.
 Pet the cat.
 Read the oldest message in the inbox.
 Shine the sink.
+Sort the todo list.
+Take a shower.
 Take out the trash.
 Take your meds.
 Take out the compost.
 Tidy.
+Tidy up the couch.
 Turn (on/off) one light.
 Turn the radio (on/off).
 What time is it?
