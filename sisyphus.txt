@@ -1,4 +1,4 @@
-Add a line to this file.
+Add a line to this file with a PR to https://github.com/vielmetti/sisyphus.
 Boil the kettle.
 Carry something (up/down) the stairs.
 Change the frequency.
