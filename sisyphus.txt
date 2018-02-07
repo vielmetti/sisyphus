@@ -21,6 +21,7 @@ How late is it?
 Make a cup of tea.
 Make the bed.
 Move the laundry around.
+(Open/close) the curtains.
 Open a book / put away a book.
 Open an issue in Github.
 Open one envelope.
@@ -37,6 +38,7 @@ Take out the compost.
 Tidy.
 Tidy up the couch.
 Turn (on/off) one light.
+Turn (on/off) the fan.
 Turn the radio (on/off).
 What time is it?
 What is for dinner?
