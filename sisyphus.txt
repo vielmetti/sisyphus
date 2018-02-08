@@ -1,6 +1,7 @@
 Add a line to this file with a PR to https://github.com/vielmetti/sisyphus.
 Boil the kettle.
 Carry something (up/down) the stairs.
+Change the cat litter.
 Change the frequency.
 Charge the computer.
 Charge the phone.
@@ -9,6 +10,7 @@ Close a drawer / open a drawer.
 Close an issue in Github.
 Close the computer.
 Did you take your meds?
+Does the cat need to be fed?
 Drink a glass of water.
 Eat a snack.
 Find a pen.
@@ -44,6 +46,7 @@ What time is it?
 What is for dinner?
 Where are your glasses?
 Where is the car parked?
+Where is the cat?
 Write one rolodex card.
 Write on a piece of paper.
 Write one sentence.
