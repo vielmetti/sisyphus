@@ -2,4 +2,4 @@
 
 Tools for the never ending task 
 
-Download, edit the Makefile, then `make install`.
+Depends on shuf or gshuf from gnu-coreutils.
