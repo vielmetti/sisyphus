@@ -14,7 +14,8 @@ RUN set -eux; \
     esac; \
     wget -O /usr/bin/fwatchdog "https://github.com/alexellis/faas/releases/download/$FWATCHDOG_VERSION/$FWATCHDOG"; \
     chmod +x /usr/bin/fwatchdog ; \
-    wget -O /usr/local/lib/sisyphus.txt "https://raw.githubusercontent.com/vielmetti/sisyphus/master/sisyphus.txt"
+    wget -O /usr/local/bin/sisyphus "https://raw.githubusercontent.com/vielmetti/sisyphus/master/sisyphus" ; \
+    chmod +x /usr/local/bin/sisyphus
 
-ENV fprocess="/usr/bin/shuf -n 1 /usr/local/lib/sisyphus.txt"
+ENV fprocess="/usr/local/bin/sisyphus"
 CMD ["fwatchdog"]
