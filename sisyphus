@@ -6,9 +6,9 @@
 
 SHUF=shuf
 
-if [[ ${OSTYPE} == darwin* ]];then
-    SHUF=gshuf
-fi
+case "$OSTYPE" in
+        darwin*)        SHUF=gshuf
+esac
 
 $SHUF -n 1 <<EOSHUF
 Add a line to this file with a PR to https://github.com/vielmetti/sisyphus.
