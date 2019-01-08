@@ -2,6 +2,12 @@ kind: pipeline
 name: greeting
 
 steps:
+- name: shellcheck
+  image: koalaman/shellcheck:stable
+  commands:
+  - make test
+  - ./sisyphus 
+
 - name: en
   image: alpine
   commands:
