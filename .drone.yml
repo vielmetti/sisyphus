@@ -34,7 +34,7 @@ steps:
   commands:
   - ./sisyphus
   
- - name: test-sisyphus-opensuse
+- name: test-sisyphus-opensuse
   image: opensuse
   commands:
   - ./sisyphus
