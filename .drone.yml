@@ -23,3 +23,18 @@ steps:
   image: centos
   commands:
   - ./sisyphus
+
+- name: test-sisyphus-debian
+  image: debian
+  commands:
+  - ./sisyphus
+  
+- name: test-sisyphus-fedora
+  image: fedora
+  commands:
+  - ./sisyphus
+  
+ - name: test-sisyphus-opensuse
+  image: opensuse
+  commands:
+  - ./sisyphus
