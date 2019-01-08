@@ -1,5 +1,5 @@
 kind: pipeline
-name: greeting
+name: sisyphus
 
 steps:
 - name: test-shellcheck
@@ -8,8 +8,13 @@ steps:
   - apk update && apk add bash
   - bash -c 'shellcheck sisyphus'
 
-- name: test-sisyphus
+- name: test-sisyphus-alpine
   image: alpine
   commands:
   - apk update && apk add bash
+  - ./sisyphus
+  
+- name: test-sisyphus-ubuntu
+  image: ubuntu
+  commands:
   - ./sisyphus
