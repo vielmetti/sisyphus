@@ -2,7 +2,7 @@ kind: pipeline
 name: greeting
 
 steps:
-- test-shellcheck:
+- name: test-shellcheck
   image: koalaman/shellcheck-alpine:latest
   commands:
   - apk update && apk add bash
