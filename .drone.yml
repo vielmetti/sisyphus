@@ -11,4 +11,5 @@ steps:
 - name: test-sisyphus
   image: alpine
   commands:
+  - apk update && apk add bash
   - ./sisyphus
