@@ -2,11 +2,11 @@ kind: pipeline
 name: greeting
 
 steps:
-- name: shellcheck
-  image: koalaman/shellcheck:stable
+- test-shellcheck:
+  image: koalaman/shellcheck-alpine:latest
   commands:
-  - make test
-  - ./sisyphus 
+  - apk update && apk add bash
+  - bash -c 'shellcheck sisyphus'
 
 - name: en
   image: alpine
