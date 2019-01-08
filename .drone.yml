@@ -8,20 +8,7 @@ steps:
   - apk update && apk add bash
   - bash -c 'shellcheck sisyphus'
 
-- name: en
+- name: test-sisyphus
   image: alpine
   commands:
-  - echo hello
-  - echo world
-
-- name: es
-  image: alpine
-  commands:
-  - echo hola
-  - echo mundo
-
-- name: fr
-  image: alpine
-  commands:
-  - echo bonjour
-  - echo monde
+  - ./sisyphus
