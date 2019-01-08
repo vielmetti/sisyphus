@@ -1,0 +1,2 @@
+test:
+    shellcheck sisyphus
