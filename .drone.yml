@@ -18,3 +18,8 @@ steps:
   image: ubuntu
   commands:
   - ./sisyphus
+
+- name: test-sisyphus-centos
+  image: centos
+  commands:
+  - ./sisyphus
