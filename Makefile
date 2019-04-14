@@ -1,2 +1,2 @@
 test:
-    shellcheck sisyphus
+	shellcheck sisyphus
