@@ -13,28 +13,35 @@ steps:
   commands:
   - apk update && apk add bash
   - ./sisyphus
+  - ./sisyphus -k write
   
 - name: test-sisyphus-ubuntu
   image: ubuntu
   commands:
   - ./sisyphus
+  - ./sisyphus -k read
 
 - name: test-sisyphus-centos
   image: centos
   commands:
   - ./sisyphus
+  - ./sisyphus -k eat
 
 - name: test-sisyphus-debian
   image: debian
   commands:
   - ./sisyphus
+  - ./sisyphus -k drink
   
 - name: test-sisyphus-fedora
   image: fedora
   commands:
   - ./sisyphus
+  - ./sisyphus -k take
   
 - name: test-sisyphus-opensuse
   image: opensuse/tumbleweed
   commands:
   - ./sisyphus
+  - ./sisyphus -k go
+  
