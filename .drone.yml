@@ -35,6 +35,6 @@ steps:
   - ./sisyphus
   
 - name: test-sisyphus-opensuse
-  image: opensuse
+  image: opensuse/tumbleweed
   commands:
   - ./sisyphus
