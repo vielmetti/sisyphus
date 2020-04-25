@@ -4,13 +4,19 @@
 #
 # there's lots of ways to pick a random line from a file
 
-SHUF=shuf
+SHUF="shuf -n 2"
 
 case "$OSTYPE" in
-        darwin*)        SHUF=gshuf
+        darwin*)        SHUF="gshuf -n 2"
 esac
 
-$SHUF -n 2 <<EOSHUF
+case "$1" in
+        -k)             SHUF="grep -i $2"
+esac
+
+
+
+$SHUF <<EOSHUF
 Add a line to this file with a PR to https://github.com/vielmetti/sisyphus.
 Boil the kettle.
 Carry something (up/down) the stairs.
