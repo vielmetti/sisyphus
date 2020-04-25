@@ -4,17 +4,20 @@
 #
 # there's lots of ways to pick a random line from a file
 
-SHUF="shuf -n 2"
+SHUFCOUNT=2
+
+case "$1" in 
+        -n)             SHUFCOUNT="$2" ;;
+esac
 
 case "$OSTYPE" in
-        darwin*)        SHUF="gshuf -n 2"
+        darwin*)        SHUF="gshuf -n $SHUFCOUNT" ;;
+        *)              SHUF="shuf -n $SHUFCOUNT" ;;
 esac
 
 case "$1" in
-        -k)             SHUF="grep -i $2"
+        -k)             SHUF="grep -i $2" ;;
 esac
-
-
 
 $SHUF <<EOSHUF
 Add a line to this file with a PR to https://github.com/vielmetti/sisyphus.
