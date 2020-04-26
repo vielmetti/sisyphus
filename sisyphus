@@ -21,6 +21,8 @@ esac
 
 $SHUF <<EOSHUF
 Add a line to this file with a PR to https://github.com/vielmetti/sisyphus.
+All you have to do is ask.
+Bird by bird.
 Boil the kettle.
 Carry something (up/down) the stairs.
 Change the frequency.
@@ -42,6 +44,8 @@ Get up and take a walk.
 Go to bed.
 Have a piece of fruit.
 Improve your posture.
+Is it busted?
+Is the back door open?
 How late is it?
 (Load/unload) the dishwasher.
 Make a cup of tea.
@@ -55,15 +59,18 @@ Open one envelope.
 Open up Facebook, read, sigh, close Facebook.
 Open up Twitter, read, sigh, close Twitter.
 Pet the cat.
+Read one sentence from a book.
 Read the oldest message in the inbox.
 Refill the water bottle.
 Shine the sink.
 Sort the todo list.
+Stop long enough to notice what's around you.
 Sudo make me a sandwich.
 Sweep the floor.
 Take a shower.
 (Take out/put back) a rolodex card.
 Take out the trash.
+Take a trash bag (up to/down from) the attic.
 Take your meds.
 Take out the compost.
 Tidy.
@@ -76,10 +83,12 @@ Wash the dishes.
 Wash your hands.
 Wear a mask when you are out.
 What time is it?
+What is for lunch?
 What is for dinner?
 Where are your glasses?
 Where is the car parked?
 Write one rolodex card.
 Write on a piece of paper.
 Write one sentence.
+Writing is like talking to the page.
 EOSHUF
