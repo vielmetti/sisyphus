@@ -1,15 +1,15 @@
-FROM alpine:3.7
+FROM alpine:3.12
 
 RUN apk update && apk upgrade && apk add coreutils ca-certificates wget && update-ca-certificates
 
-ENV FWATCHDOG_VERSION 0.9.11
+ENV FWATCHDOG_VERSION 0.19.1
 
 RUN set -eux; \
     apkArch="$(apk --print-arch)" ; \
 # what system are we on
     case "$apkArch" in \
         x86_64)  export FWATCHDOG=fwatchdog ;; \
-	      armhf)   export FWATCHDOG=fwatchdog-armhf ;; \
+	armhf)   export FWATCHDOG=fwatchdog-armhf ;; \
         aarch64) export FWATCHDOG=fwatchdog-arm64 ;; \
     esac; \
     wget -O /usr/bin/fwatchdog "https://github.com/openfaas/faas/releases/download/$FWATCHDOG_VERSION/$FWATCHDOG"; \
