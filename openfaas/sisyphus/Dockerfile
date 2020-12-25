@@ -11,8 +11,6 @@ RUN chmod +x /usr/bin/fwatchdog
 RUN wget -O /usr/bin/sisyphus "https://raw.githubusercontent.com/vielmetti/sisyphus/master/sisyphus" ; \
     chmod +x /usr/bin/sisyphus
 
-ENV fprocess="/usr/bin/sisyphus"
-CMD ["fwatchdog"]
 # Add non root user
 RUN addgroup -S app && adduser app -S -G app
 RUN chown app /home/app
