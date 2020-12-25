@@ -1,21 +1,33 @@
+FROM ghcr.io/openfaas/classic-watchdog:0.1.4 as watchdog
+
 FROM alpine:3.12
+RUN apk update && apk upgrade && apk add coreutils ca-certificates wget bash && update-ca-certificates
 
-RUN apk update && apk upgrade && apk add coreutils ca-certificates wget && update-ca-certificates
+RUN mkdir -p /home/app
 
-ENV FWATCHDOG_VERSION 0.19.1
+COPY --from=watchdog /fwatchdog /usr/bin/fwatchdog
+RUN chmod +x /usr/bin/fwatchdog
 
-RUN set -eux; \
-    apkArch="$(apk --print-arch)" ; \
-# what system are we on
-    case "$apkArch" in \
-        x86_64)  export FWATCHDOG=fwatchdog ;; \
-	armhf)   export FWATCHDOG=fwatchdog-armhf ;; \
-        aarch64) export FWATCHDOG=fwatchdog-arm64 ;; \
-    esac; \
-    wget -O /usr/bin/fwatchdog "https://github.com/openfaas/faas/releases/download/$FWATCHDOG_VERSION/$FWATCHDOG"; \
-    chmod +x /usr/bin/fwatchdog ; \
-    wget -O /usr/local/bin/sisyphus "https://raw.githubusercontent.com/vielmetti/sisyphus/master/sisyphus" ; \
-    chmod +x /usr/local/bin/sisyphus
+RUN wget -O /usr/bin/sisyphus "https://raw.githubusercontent.com/vielmetti/sisyphus/master/sisyphus" ; \
+    chmod +x /usr/bin/sisyphus
 
-ENV fprocess="/usr/local/bin/sisyphus"
+ENV fprocess="/usr/bin/sisyphus"
+CMD ["fwatchdog"]
+# Add non root user
+RUN addgroup -S app && adduser app -S -G app
+RUN chown app /home/app
+
+WORKDIR /home/app
+
+USER app
+
+# Populate example here - i.e. "cat", "sha512sum" or "node index.js"
+ENV fprocess="/usr/bin/sisyphus"
+# Set to true to see request in function logs
+ENV write_debug="false"
+
+EXPOSE 8080
+
+HEALTHCHECK --interval=3s CMD [ -e /tmp/.lock ] || exit 1
+
 CMD ["fwatchdog"]
