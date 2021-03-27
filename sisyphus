@@ -1,16 +1,17 @@
-#!/bin/bash
+#!/bin/sh
 #
 # sisphyus - tools for the never ending task
 #
 # there's lots of ways to pick a random line from a file
 
 SHUFCOUNT=2
+DEVRANDOM=$(od -An -N4 -i /dev/random)
 
 case "$1" in 
         -n)             SHUFCOUNT="$2" ;;
 esac
 
-awk -v k="$SHUFCOUNT" -v seed="$RANDOM" <<EOSHUF \
+awk -v k="$SHUFCOUNT" -v seed="$DEVRANDOM" <<EOSHUF \
   'BEGIN {srand(seed)} { s = NR <= k ? NR : int(rand() * NR);  if (s < k) R[s] = $0  } END {for (i in R) print R[i]}'
 Add a line to this file with a PR to https://github.com/vielmetti/sisyphus.
 All you have to do is ask.
