@@ -10,16 +10,10 @@ case "$1" in
         -n)             SHUFCOUNT="$2" ;;
 esac
 
-case "$OSTYPE" in
-        darwin*)        SHUF="gshuf -n $SHUFCOUNT" ;;
-        *)              SHUF="shuf -n $SHUFCOUNT" ;;
-esac
-
-case "$1" in
-        -k)             SHUF="grep -i $2" ;;
-esac
-
-$SHUF <<EOSHUF
+awk -v k=$SHUFCOUNT <<EOSHUF \
+  'BEGIN {srand(systime() + PROCINFO["pid"])} \
+  { s = NR <= k ? NR : int(rand() * NR);  if (s < k) R[s] = $0  } \
+  END {for (i in R) print R[i]}'
 Add a line to this file with a PR to https://github.com/vielmetti/sisyphus.
 All you have to do is ask.
 Bird by bird.
