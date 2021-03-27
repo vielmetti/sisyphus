@@ -12,7 +12,6 @@ steps:
   image: alpine
   commands:
   - apk update && apk add bash
-  - awk
   - ./sisyphus
   - ./sisyphus -k write
   depends_on: [test-shellcheck]
@@ -20,7 +19,6 @@ steps:
 - name: test-sisyphus-ubuntu
   image: ubuntu
   commands:
-  - awk
   - ./sisyphus
   - ./sisyphus -k read
   depends_on: [test-shellcheck]
@@ -28,7 +26,6 @@ steps:
 - name: test-sisyphus-centos
   image: centos
   commands:
-  - awk
   - ./sisyphus
   - ./sisyphus -k eat
   depends_on: [test-shellcheck]
@@ -36,7 +33,6 @@ steps:
 - name: test-sisyphus-debian
   image: debian
   commands:
-  - awk
   - ./sisyphus
   - ./sisyphus -k drink
   depends_on: [test-shellcheck]
@@ -44,7 +40,6 @@ steps:
 - name: test-sisyphus-fedora
   image: fedora
   commands:
-  - awk
   - ./sisyphus
   - ./sisyphus -k take
   depends_on: [test-shellcheck]
@@ -52,7 +47,6 @@ steps:
 - name: test-sisyphus-opensuse
   image: opensuse/tumbleweed
   commands:
-  - awk
   - ./sisyphus
   - ./sisyphus -k go
   depends_on: [test-shellcheck]
