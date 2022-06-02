@@ -14,6 +14,7 @@ esac
 awk -v k="$SHUFCOUNT" -v seed="$DEVRANDOM" <<EOSHUF \
   'BEGIN {srand(seed)} { s = NR <= k ? NR : int(rand() * NR);  if (s < k) R[s] = $0  } END {for (i in R) print R[i]}'
 Add a line to this file with a PR to https://github.com/vielmetti/sisyphus.
+Address a postcard, but don't mail it yet.
 All you have to do is ask.
 Bird by bird.
 Boil the kettle.
@@ -29,6 +30,7 @@ Close the computer.
 Cover your mouth when you cough.
 Did you take your meds?
 Do the laundry.
+Do you have postcard stamps here?
 Drink a glass of water.
 Eat a snack.
 Find a pen.
@@ -59,6 +61,8 @@ Pet the cat.
 Read one sentence from a book.
 Read the oldest message in the inbox.
 Refill the water bottle.
+Send a postcard.
+Send a postcard to Mom.
 Shine the sink.
 Sort the todo list.
 Stop long enough to notice what's around you.
@@ -72,7 +76,10 @@ Take your meds.
 Take out the compost.
 Tea time!
 Tidy.
+Tidy up the bedroom.
 Tidy up the couch.
+Tidy up the desk.
+Tidy up the kitchen.
 Tidy up the laundry.
 Tune your radio.
 Turn (on/off) one light.
